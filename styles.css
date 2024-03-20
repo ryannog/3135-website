@@ -4,17 +4,13 @@
 
 .carousel {
     margin: auto;
-    width: 70%; 
+    width: 70%;
 }
 
 .carousel-item img {
     width: 100%;
     height: auto;
     object-fit: cover;
-}
-
-.container {
-    flex: auto;
 }
 
 p {
@@ -24,4 +20,36 @@ p {
 h1 {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: bold;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content {
+    flex-grow: 1;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer p {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 0;
+}
+
+.footer .nav-link {
+    color: lightgray;
 }
