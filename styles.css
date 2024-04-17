@@ -250,7 +250,6 @@ header h1 {
     margin-bottom: 0.5rem;
 }
 
-/* Styles for modal */
 .modal {
     display: none;
     position: fixed;
@@ -263,7 +262,6 @@ header h1 {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-/* Modal Content/Box */
 .modal-dialog {
     margin: 15% auto;
     width: 80%;
@@ -276,22 +274,6 @@ header h1 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Close Button */
-.btn-close {
-    color: #aaa;
-    float: right;
-    font-size: 24px;
-    font-weight: bold;
-    border: none;
-    background: transparent;
-    cursor: pointer;
-}
-
-.btn-close:hover {
-    color: black;
-}
-
-/* Modal Header */
 .modal-header {
     border-bottom: 1px solid #ccc;
     padding-bottom: 10px;
@@ -302,45 +284,27 @@ header h1 {
     margin: 0;
 }
 
-/* Modal Body */
 .modal-body {
     margin-bottom: 20px;
 }
 
-/* Modal Footer */
-.modal-footer {
-    border-top: 1px solid #ccc;
-    padding-top: 10px;
-    margin-top: 10px;
-    text-align: right;
-}
-
-/* Style the image */
 .list-group-item img {
     width: 100px;
-    /* Adjust the width as needed */
     height: auto;
-    /* Maintain aspect ratio */
     margin-right: 10px;
-    /* Add space between image and text */
 }
 
-/* Ensure the text aligns properly */
 .list-group-item .d-flex {
     align-items: center;
-    /* Align vertically */
 }
 
-/* Optionally, style other elements as needed */
 .list-group-item h5 {
     margin-bottom: 5px;
-    /* Add space below heading */
 }
 
 .list-group-item p,
 .list-group-item small {
     margin: 0;
-    /* Remove default margins */
 }
 
 .accordion {
