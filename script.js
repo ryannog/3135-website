@@ -23,31 +23,47 @@ navItems.forEach((navItem, index) => {
     });
 });
 
-function swipe(e){
+function swipe(e) {
     const currentCarouselItem = document.querySelector('.carousel-item.active');
     const currentIndex = carouselItems.indexOf(currentCarouselItem);
 
     let nextIndex;
 
-    if(e.currentTarget.classList.contains('left')) {
-        if(currentIndex === 0) {
+    if (e.currentTarget.classList.contains('left')) {
+        if (currentIndex === 0) {
             nextIndex = CAROUSEL_SIZE - 1;
         }
-        else{
+        else {
             nextIndex = currentIndex - 1;
-        }    
+        }
     }
     else {
-        if(currentIndex === CAROUSEL_SIZE - 1) {
+        if (currentIndex === CAROUSEL_SIZE - 1) {
             nextIndex = 0;
         }
-        else{
+        else {
             nextIndex = currentIndex + 1;
         }
     }
-    
+
     carouselItems[nextIndex].classList.add('active');
     navItems[nextIndex].classList.add('active');
     currentCarouselItem.classList.remove('active');
     navItems[currentIndex].classList.remove('active');
+}
+
+function openModal(modalId) {
+    var modal = document.getElementById("myModal" + modalId);
+    modal.style.display = "block";
+
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+}
+
+function closeModal(modalId) {
+    var modal = document.getElementById("myModal" + modalId);
+    modal.style.display = "none";
 }

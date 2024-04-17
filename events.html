@@ -5,123 +5,175 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NC Powerlifting</title>
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-  <link href="styles.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="index.html">
+  <header>
+    <a href="index.html">
       <img src="/static/nc-usapl.jpg" alt="Logo" height="50">
     </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="index.html">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="events.html">Events</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="additional_resources.html">Additional Resources</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="contact.html">Contact</a>
-        </li>
+    <h1>North Carolina Powerlifting</h1>
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="additional_resources.html">Additional Resources</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
       </ul>
-    </div>
-  </nav>
+    </nav>
+  </header>
 
-  <div class="wrapper">
-    <div class="content">
-      <div class="center">
-        <h1>Calendar</h1>
-      </div>
-
-      <div class="center mb-3">
-        <div class="list-group container">
-          <a href="#" class="list-group-item list-group-item-action" aria-current="true">
-            <div class="d-flex w-100 justify-content-between">
-              <h5 class="mb-1">USA Powerlifting North Carolina State Championship</h5>
-              <small class="text-body-secondary">03/23</small>
-            </div>
-            <p class="mb-1">Raleigh, NC</p>
-            <small class="text-body-secondary">J.S. Dorton Arena 4285 Trinity Rd</small>
-          </a>
-          <a href="#" class="list-group-item list-group-item-action">
-            <div class="d-flex w-100 justify-content-between">
-              <h5 class="mb-1">USA Powerlifting Battle on the Border</h5>
-              <small>06/15</small>
-            </div>
-            <p class="mb-1">Concord, NC</p>
-            <small>Cabarrus Arena 4751 State Hwy 49</small>
-          </a>
-          <a href="#" class="list-group-item list-group-item-action">
-            <div class="d-flex w-100 justify-content-between">
-              <h5 class="mb-1">2024 Powerlifting America SBD Raleigh</h5>
-              <small>07/24</small>
-            </div>
-            <p class="mb-1">Durham, NC</p>
-            <small>Durham Convention Center 301 W Morgan St</small>
-          </a>
-          <a href="#" class="list-group-item list-group-item-action">
-            <div class="d-flex w-100 justify-content-between">
-              <h5 class="mb-1">Powerlifting America Carolina Carnage</h5>
-              <small class="text-body-secondary">10/19</small>
-            </div>
-            <p class="mb-1">Charlotte, NC</p>
-            <small class="text-body-secondary">Pride Conditioning 337 Dalton Ave</small>
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <footer class="footer footer bg-dark text-white">
-      <div class="container">
-        <div class="row">
-          <div class="col text-center">
-            <p>&copy; 2024 My Website. All Rights Reserved.</p>
-          </div>
-          <div class="col">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="index.html">Home</a>
-              </li>
-            </ul>
-          </div>
-          <div class="col">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="events.html">Events</a>
-              </li>
-            </ul>
-          </div>
-          <div class="col">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="additional_resources.html">Additional Resources</a>
-              </li>
-            </ul>
-          </div>
-          <div class="col">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact</a>
-              </li>
-            </ul>
+  <div class="center mb-3">
+    <div class="list-group container">
+      <a href="#" class="list-group-item list-group-item-action" aria-current="true" onclick="openModal(1)">
+        <div class="d-flex justify-content-between">
+          <img src="static/nc-state-champ.png" alt="meet logo">
+          <div>
+            <h5>USA Powerlifting North Carolina State Championship</h5>
+            <small class="text-body-secondary">03/23</small>
           </div>
         </div>
-      </div>
-    </footer>
+        <p>Raleigh, NC</p>
+      </a>
+      <a href="#" class="list-group-item list-group-item-action" onclick="openModal(2)">
+        <div class="d-flex justify-content-between">
+          <img src="static/logo-coming-soon.png" alt="meet logo">
+          <div>
+            <h5>USA Powerlifting Battle on the Border</h5>
+            <small>06/15</small>
+          </div>
+        </div>
+        <p>Concord, NC</p>
+      </a>
+      <a href="#" class="list-group-item list-group-item-action" onclick="openModal(3)">
+        <div class="d-flex justify-content-between">
+          <img src="static/sbd-raleigh.jpg" alt="meet logo">
+          <div>
+            <h5>2024 Powerlifting America SBD Raleigh</h5>
+            <small>07/24</small>
+          </div>
+        </div>
+        <p>Durham, NC</p>
+      </a>
+      <a href="#" class="list-group-item list-group-item-action" onclick="openModal(4)">
+        <div class="d-flex justify-content-between">
+          <img src="static/Carolina-Carnage.jpeg" alt="meet logo">
+          <div>
+            <h5>Powerlifting America Carolina Carnage</h5>
+            <small>10/19</small>
+          </div>
+        </div>
+        <p>Charlotte, NC</p>
+      </a>
+    </div>
   </div>
 
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <div class="modal" id="myModal1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">USA Powerlifting North Carolina State Championship</h4>
+        </div>
+        <!-- Modal body -->
+        <div class="modal-body">
+          <p>Date: March 23rd, 2024</p>
+          <p>Location: Raleigh, NC</p>
+          <p>Address: J.S. Dorton Arena 4285 Trinity Rd</p>
+          <a href="https://liftingcast.com/meets/m3n9q7xllqlg/registration" target="_blank">Register Here</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="myModal2">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">USA Powerlifting Battle on the Border</h4>
+        </div>
+        <!-- Modal body -->
+        <div class="modal-body">
+          <p>Date: June 15th, 2024</p>
+          <p>Location: Concord, NC</p>
+          <p>Address: Cabarrus Arena 4751 State Hwy 49</p>
+          <a href="https://liftingcast.com/meets/mq1r8g6krm9y/registration" target="_blank">Register Here</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="myModal3">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">2024 Powerlifting America SBD Raleigh</h4>
+        </div>
+        <!-- Modal body -->
+        <div class="modal-body">
+          <p>Date: July 24th, 2024</p>
+          <p>Location: Durham, NC</p>
+          <p>Address: Durham Convention Center 301 W Morgan St</p>
+          <a href="https://powerlifting-america.com/event/2024-powerlifting-america-sbd-raleigh/"
+            target="_blank">Register Here</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="myModal4">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Powerlifting America Carolina Carnage</h4>
+        </div>
+        <!-- Modal body -->
+        <div class="modal-body">
+          <p>Date: October 19th, 2024</p>
+          <p>Location: Charlotte, NC</p>
+          <p>Address: Pride Conditioning 337 Dalton Ave</p>
+          <a href="https://liftingcast.com/meets/m3k2mpjnozvd/registration" target="_blank">Register Here</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col text-center">
+          <p>&copy; 2024 My Website. All Rights Reserved.</p>
+        </div>
+        <div class="col">
+          <ul class="footer-nav">
+            <li><a href="index.html">Home</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <ul class="footer-nav">
+            <li><a href="events.html">Events</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <ul class="footer-nav">
+            <li><a href="additional_resources.html">Additional Resources</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <ul class="footer-nav">
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
 </body>
 
 </html>
