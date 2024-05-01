@@ -345,3 +345,50 @@ header h1 {
 .rule-book {
     color: white;
 }
+
+.container .center{
+    color: white;
+}
+
+h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: var(--quaternary-color);
+    color: white;
+    padding: 10px;
+}
+
+.tutorial {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: var(--primary-color);
+    padding: 20px;
+}
+
+.tutorial video {
+    max-width: 100%;
+    height: auto;
+}
+
+.tutorial {
+    border-radius: 10px;
+    background-color: var(--primary-color);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.tutorial h3 {
+    background-color: var(--quaternary-color);
+    color: white;
+    padding: 10px;
+    border-radius: 10px 10px 10px 10px;
+}
+
+
+.tutorial div {
+    padding: 20px;
+    border-radius: 10px 10px 10px 10px;
+    background-color: var(--primary-color);
+}

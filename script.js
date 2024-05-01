@@ -67,3 +67,23 @@ function closeModal(modalId) {
     var modal = document.getElementById("myModal" + modalId);
     modal.style.display = "none";
 }
+
+fetch(`https://www.googleapis.com/youtube/v3/videos?id={VIDEO_ID}&key={YOUR_API_KEY}&part=snippet,contentDetails,statistics,status`)
+    .then(response => response.json())
+    .then(data => {
+        updatePage(data);
+    })
+    .catch(error => {
+        displayError(`Fetch failed: ${error.message}`);
+    });
+
+    function updatePage(data) {
+        // This function will be called when the fetch promise is resolved
+        // You can now update the page with the data from the API
+    }
+
+    function displayError(message) {
+        const errorElement = document.createElement('p');
+        errorElement.textContent = message;
+        document.getElementById('player-container').appendChild(errorElement);
+    }
